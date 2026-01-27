@@ -249,6 +249,11 @@ body.show-chatbot .chatbot {
     .chatbot-toggler {
         right: 20px;
         bottom: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .chatbot-toggler span {
+        font-size: 1.4rem;
     }
     .chatbot {
         right: 0;
@@ -256,10 +261,17 @@ body.show-chatbot .chatbot {
         height: 100% !important;
         width: 100%;
         border-radius: 0;
+        border: none;
     }
     .chatbot .chatbox {
-        height: calc(100% - 80px);
+        height: calc(100% - 75px); /* Adjust for header and input */
         padding: 25px 15px 100px;
+    }
+    .chatbot header {
+        padding: 15px 20px;
+    }
+    .chatbot .chat-input {
+        padding: 15px 20px;
     }
 }
 `;
