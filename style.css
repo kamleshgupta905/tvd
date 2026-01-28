@@ -1681,3 +1681,139 @@ footer {
     letter-spacing: -0.05em;
     font-family: 'Inter', sans-serif;
 }
+
+/* ---------------------------------------------------------
+   SOCIAL CONNECT CARDS (New)
+--------------------------------------------------------- */
+.social-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.0);
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.social-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.social-info p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-card:hover .arrow-icon {
+    color: var(--text-dark);
+    transform: translateX(4px) rotate(-45deg);
+}
+
+/* -- Brand Specifics -- */
+
+/* Instagram */
+.instagram-card .social-icon {
+    background: #fdf2f8;
+    color: #ec4899;
+}
+
+.instagram-card:hover .social-icon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+    box-shadow: 0 8px 16px rgba(214, 36, 159, 0.25);
+}
+
+/* Facebook */
+.facebook-card .social-icon {
+    background: #eff6ff;
+    color: #1877F2;
+}
+
+.facebook-card:hover .social-icon {
+    background: #1877F2;
+    color: white;
+    box-shadow: 0 8px 16px rgba(24, 119, 242, 0.25);
+}
+
+/* WhatsApp */
+.whatsapp-card .social-icon {
+    background: #dcfce7;
+    color: #25D366;
+}
+
+.whatsapp-card:hover .social-icon {
+    background: #25D366;
+    color: white;
+    box-shadow: 0 8px 16px rgba(37, 211, 102, 0.25);
+}
+
+/* Google Maps */
+.google-card .social-icon {
+    background: #eff6ff;
+    color: #ea4335;
+}
+
+.google-card:hover .social-icon {
+    background: #4285F4;
+    color: white;
+    box-shadow: 0 8px 16px rgba(66, 133, 244, 0.25);
+}
+
+@media (max-width: 992px) {
+    .social-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .social-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

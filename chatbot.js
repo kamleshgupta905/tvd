@@ -245,12 +245,52 @@ body.show-chatbot .chatbot {
     transform: scale(1.05);
 }
 
+.whatsapp-toggler {
+    position: fixed;
+    bottom: 30px;
+    right: 110px;
+    border: none;
+    height: 64px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #25D366;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 9999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.whatsapp-toggler:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-toggler span {
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 490px) {
     .chatbot-toggler {
         right: 20px;
         bottom: 20px;
         width: 50px;
         height: 50px;
+    }
+    .whatsapp-toggler {
+        right: 85px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-toggler span {
+        font-size: 1.5rem;
     }
     .chatbot-toggler span {
         font-size: 1.4rem;
@@ -277,6 +317,9 @@ body.show-chatbot .chatbot {
 `;
 
 const chatbotHTML = `
+<a href="https://wa.me/919008528434" class="whatsapp-toggler" target="_blank">
+    <span class="material-symbols-rounded"><i class="fa-brands fa-whatsapp"></i></span>
+</a>
 <button class="chatbot-toggler">
     <span class="material-symbols-rounded"><i class="fa-solid fa-message"></i></span>
     <span class="material-symbols-outlined"><i class="fa-solid fa-xmark"></i></span>
