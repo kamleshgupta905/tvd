@@ -497,6 +497,12 @@ transition: var(--transition);
 border: 1px solid #f1f5f9;
 }
 
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+    }
+}
+
 .card:hover {
 transform: translateY(-5px);
 box-shadow: var(--shadow-lg);
