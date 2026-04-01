@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://grsolution.com/sitemap.xml
