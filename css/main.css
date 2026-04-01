@@ -475,6 +475,18 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 gap: 2rem;
 }
 
+.grid-2-alt {
+display: grid;
+grid-template-columns: 1fr 1.5fr;
+gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .grid-2-alt {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Cards */
 .card {
 background: var(--white);
