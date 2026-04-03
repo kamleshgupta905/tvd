@@ -313,6 +313,79 @@ cursor: pointer;
 color: var(--secondary);
 }
 
+/* Dropdown Menu Styles */
+.nav-links li {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background: var(--white);
+    min-width: 250px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    padding: 0.8rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0,0,0,0.05);
+    z-index: 1001;
+    display: block;
+}
+
+.nav-links li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.9rem !important;
+    color: var(--text-main) !important;
+    transition: var(--transition) !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+}
+
+.dropdown-menu a::after {
+    display: none !important;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(13, 71, 161, 0.05) !important;
+    color: var(--primary) !important;
+    padding-left: 2rem !important;
+}
+
+.dropdown-menu a i {
+    width: 20px;
+    text-align: center;
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+/* Caret icon for dropdowns */
+.nav-links a i.fa-chevron-down {
+    font-size: 0.7rem;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.nav-links li:hover > a i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
 @media (max-width: 992px) {
 .nav-links {
 display: none;
@@ -320,6 +393,23 @@ display: none;
 
 .mobile-menu-toggle {
 display: block;
+}
+
+.dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    padding: 0 0 0 1.5rem;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    background: transparent;
+    border: none;
+    min-width: 100%;
+}
+
+.nav-links li.active-dropdown .dropdown-menu {
+    display: block;
 }
 }
 
