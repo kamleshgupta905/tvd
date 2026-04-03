@@ -697,6 +697,91 @@ color: #9ca3af;
 font-size: 0.9rem;
 }
 
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.contact-info li:hover {
+    transform: translateX(5px);
+}
+
+.contact-info li i {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.contact-info li:hover i {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.4);
+}
+
+.contact-info span {
+    color: #9ca3af;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.contact-info a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.social-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(13, 71, 161, 0.4);
+}
+
+.social-btn.facebook:hover { background: #1877f2; }
+.social-btn.instagram:hover { background: #e4405f; }
+.social-btn.whatsapp:hover { background: #25d366; }
+.social-btn.youtube:hover { background: #ff0000; }
+
 /* Testimonials Slider */
 /* SLV PRO Testimonials */
 .testimonial-section {
