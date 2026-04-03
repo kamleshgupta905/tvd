@@ -92,14 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        if (question && answer) {
+        if (question) {
             question.addEventListener('click', () => {
-                const isOpen = answer.style.maxHeight;
-                // Close others
-                faqItems.forEach(it => it.querySelector('.faq-answer').style.maxHeight = null);
-                if (!isOpen) {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                const isActive = item.classList.contains('active');
+                // Close all others
+                faqItems.forEach(it => it.classList.remove('active'));
+                // Toggle current if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
                 }
             });
         }
