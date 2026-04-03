@@ -38,7 +38,19 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="nav-item">
+                    <a href="services.html">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services/led-tv-repair.html"><i class="fa-solid fa-tv"></i> LED TV Repair</a></li>
+                        <li><a href="services/oled-qled-repair.html"><i class="fa-solid fa-display"></i> OLED/QLED Repair</a></li>
+                        <li><a href="services/panel-bonding.html"><i class="fa-solid fa-microchip"></i> Panel Bonding</a></li>
+                        <li><a href="services/smart-tv-setup.html"><i class="fa-solid fa-gear"></i> Smart TV Setup</a></li>
+                        <li><a href="services/mobile-repair.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Repair</a></li>
+                        <li><a href="services/laptop-repair.html"><i class="fa-solid fa-laptop"></i> Laptop Repair</a></li>
+                        <li><a href="services/cctv-repair.html"><i class="fa-solid fa-video"></i> CCTV Security</a></li>
+                        <li><a href="services/dth-services.html"><i class="fa-solid fa-satellite-dish"></i> DTH Services</a></li>
+                    </ul>
+                </li>
                 <li><a href="blog.html" class="active">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -51,14 +63,16 @@
     </header>
 
     <!-- Blog Hero -->
-    <section class="section"
-        style="padding: 100px 0; background: var(--secondary); color: var(--white); text-align: center;">
+    <section class="section" style="padding: 120px 0; background: linear-gradient(rgba(13, 71, 161, 0.85), rgba(13, 71, 161, 0.85)), url('images/hero.png'); background-size: cover; background-position: center; color: var(--white); text-align: center;">
         <div class="container animate-on-scroll">
-            <span class="badge" style="background: var(--primary); border: none;">INSIGHTS</span>
-            <h1 style="color: white; font-size: 3.5rem; margin-top: 1rem;">Expert TV Care <span
-                    style="color: var(--primary);">& Repair Guides</span></h1>
-            <p style="max-width: 700px; margin: 1.5rem auto; opacity: 0.8; font-size: 1.1rem;">Your ultimate resource
-                for maintaining high-end display technology. From deep technical guides to simple maintenance tips.</p>
+            <span class="badge" style="background: var(--white); color: var(--primary); border: none;">REPAIR INSIGHTS</span>
+            <h1 style="color: white; font-size: clamp(2.5rem, 5vw, 4rem); margin-top: 1.5rem; line-height: 1.1;">Expert TV Care & <br><span style="color: #64b5f6;">Technical Guides</span></h1>
+            <p style="max-width: 750px; margin: 1.5rem auto; opacity: 0.9; font-size: 1.2rem; line-height: 1.6;">Stay updated with the latest in display technology, professional maintenance tips, and expert guides to keep your devices running at peak performance.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <span style="font-size: 0.9rem; opacity: 0.8;"><i class="fa-solid fa-check-circle"></i> 50+ Guides</span>
+                <span style="font-size: 0.9rem; opacity: 0.8;"><i class="fa-solid fa-check-circle"></i> Technical Tips</span>
+                <span style="font-size: 0.9rem; opacity: 0.8;"><i class="fa-solid fa-check-circle"></i> Latest Tech</span>
+            </div>
         </div>
     </section>
 
@@ -198,10 +212,11 @@
                     </a>
                     <p>Delhi NCR's #1 premium TV repair service provider with 15+ years of technical excellence and
                         transparent pricing.</p>
-                    <div class="social-links" style="margin-top: 2rem;">
-                        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-btn facebook" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-btn instagram" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/919008528434" class="social-btn whatsapp" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://youtube.com" class="social-btn youtube" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
