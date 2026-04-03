@@ -9,18 +9,6 @@
         content="Explore our full range of technical services including LED TV repair, OLED pixel correction, and Smart TV setup. Fast, reliable, and genuine parts in Delhi NCR.">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Google Analytics (GA4) - Replace G-XXXXXXXXXX with your ID -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script> -->
-
-    <!-- Google Search Console Verification - Replace YOUR_VERIFICATION_ID with your ID -->
-    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_ID" /> -->
 <link rel="icon" type="image/jpeg" href="images/logo.jpg">
 </head>
 
@@ -29,12 +17,23 @@
         <div class="container navbar">
             <a href="index.html" class="logo">
                 <img src="images/logo.jpg" alt="GR Solution Logo" style="height: 50px;">
-
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
+                <li class="nav-item">
+                    <a href="services.html" class="active">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services/led-tv-repair.html"><i class="fa-solid fa-tv"></i> LED TV Repair</a></li>
+                        <li><a href="services/oled-qled-repair.html"><i class="fa-solid fa-display"></i> OLED/QLED Repair</a></li>
+                        <li><a href="services/panel-bonding.html"><i class="fa-solid fa-microchip"></i> Panel Bonding</a></li>
+                        <li><a href="services/smart-tv-setup.html"><i class="fa-solid fa-gear"></i> Smart TV Setup</a></li>
+                        <li><a href="services/mobile-repair.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Repair</a></li>
+                        <li><a href="services/laptop-repair.html"><i class="fa-solid fa-laptop"></i> Laptop Repair</a></li>
+                        <li><a href="services/cctv-repair.html"><i class="fa-solid fa-video"></i> CCTV Security</a></li>
+                        <li><a href="services/dth-services.html"><i class="fa-solid fa-satellite-dish"></i> DTH Services</a></li>
+                    </ul>
+                </li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -112,99 +111,13 @@
         </div>
     </section>
 
-    <!-- Our Repair Process -->
-    <section class="section"
-        style="padding: 120px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
-        <div class="container">
-            <div class="section-title animate-on-scroll" style="text-align: center;">
-                <span class="badge" style="margin-bottom: 1.5rem;">TRANSPARENT WORKFLOW</span>
-                <h2>Our 4-Step Repair Process</h2>
-                <p>How we ensure the highest standards of technical precision and customer satisfaction.</p>
-            </div>
-            <div class="grid-4"
-                style="margin-top: 5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
-                <div class="animate-on-scroll" style="text-align: center; position: relative;">
-                    <div
-                        style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 2rem; font-weight: 800; box-shadow: 0 10px 25px rgba(13, 71, 161, 0.3);">
-                        1</div>
-                    <h3 style="margin-bottom: 1rem; color: var(--secondary);">90-Min Home Visit</h3>
-                    <p style="color: var(--text-muted);">Our lead engineer dispatches to your location anywhere in Delhi
-                        NCR within 90 minutes of your booking confirmation.</p>
-                </div>
-                <div class="animate-on-scroll" style="text-align: center; position: relative;">
-                    <div
-                        style="width: 80px; height: 80px; background: var(--secondary); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 2rem; font-weight: 800; box-shadow: 0 10px 25px rgba(13, 12, 34, 0.3);">
-                        2</div>
-                    <h3 style="margin-bottom: 1rem; color: var(--secondary);">Expert Diagnostics</h3>
-                    <p style="color: var(--text-muted);">We perform a full hardware and software scan of your device to
-                        identify the root cause using digital testing equipment.</p>
-                </div>
-                <div class="animate-on-scroll" style="text-align: center; position: relative;">
-                    <div
-                        style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 2rem; font-weight: 800; box-shadow: 0 10px 25px rgba(13, 71, 161, 0.3);">
-                        3</div>
-                    <h3 style="margin-bottom: 1rem; color: var(--secondary);">Certified Repair</h3>
-                    <p style="color: var(--text-muted);">Repairs are carried out using 100% genuine authorized parts.
-                        90% of failures are resolved on the same day at your doorstep.</p>
-                </div>
-                <div class="animate-on-scroll" style="text-align: center; position: relative;">
-                    <div
-                        style="width: 80px; height: 80px; background: var(--secondary); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 2rem; font-weight: 800; box-shadow: 0 10px 25px rgba(13, 12, 34, 0.3);">
-                        4</div>
-                    <h3 style="margin-bottom: 1rem; color: var(--secondary);">Quality Certificate</h3>
-                    <p style="color: var(--text-muted);">We issue an authorized GST bill and a 12-month service
-                        certificate, guaranteeing our workmanship and your peace of mind.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Meet Our Team Section -->
-    <section class="section" style="padding: 120px 0; background: var(--white);">
-        <div class="container hero-grid"
-            style="align-items: center; gap: 5rem;">
-            <div class="animate-on-scroll">
-                <span class="badge" style="margin-bottom: 1.5rem;">EXPERT ENGINEERS</span>
-                <h2 style="font-size: 3rem; margin-bottom: 2rem;">Meet Our <span style="color: var(--primary);">Expert
-                        Repair Team</span></h2>
-                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem;">At GR Solution, our team
-                    consists of 25+ certified electronics engineers who have worked with major global brands like Sony,
-                    Samsung, and LG. We specialize in precision board-level and panel repairs that most shops can't
-                    handle.</p>
-                <div style="display: flex; gap: 3rem; margin-top: 2.5rem;">
-                    <div>
-                        <h2 style="margin-bottom: 0; color: var(--secondary);">15+</h2>
-                        <span style="color: var(--text-muted);">Years Experience</span>
-                    </div>
-                    <div>
-                        <h2 style="margin-bottom: 0; color: var(--secondary);">25k+</h2>
-                        <span style="color: var(--text-muted);">TVs Repaired</span>
-                    </div>
-                </div>
-            </div>
-            <div class="animate-on-scroll">
-                <img src="images/team.png" alt="GR Solution Technical Team"
-                    style="border-radius: 20px; width: 100%; box-shadow: var(--shadow-lg);">
-            </div>
-        </div>
-    </section>
-
-    <!-- Shared Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem; color: var(--white);">
-                        <img src="images/logo.jpg" alt="GR Solution" style="height: 40px;">
-
-                    </a>
-                    <p>Delhi NCR's #1 premium TV repair service provider with 15+ years of technical excellence and
-                        transparent pricing.</p>
-                    <div class="social-links" style="margin-top: 2rem;">
-                        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
+                    <img src="images/logo.jpg" alt="GR Solution" style="height: 40px; margin-bottom: 1.5rem;">
+                    <p>Delhi NCR's #1 premium TV repair service provider.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -212,42 +125,16 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services/led-tv-repair.html">TV Repair</a></li>
-                        <li><a href="services/laptop-repair.html">Laptop Repair</a></li>
-                        <li><a href="services/mobile-repair.html">Mobile Repair</a></li>
-                        <li><a href="services/oled-qled-repair.html">OLED/QLED</a></li>
-                        <li><a href="services/smart-tv-setup.html">TV Setup</a></li>
-                        <li><a href="services/panel-bonding.html">Bonding</a></li>
-                        <li><a href="services/cctv-repair.html">CCTV Fix</a></li>
-                        <li><a href="services/dth-services.html">DTH Setup</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul class="contact-info">
-                        <li><i class="fa-solid fa-location-dot"></i> <span>Main Market, Delhi NCR</span></li>
-                        <li><i class="fa-solid fa-phone"></i> <span>+91 90085 28434</span></li>
-                        <li><i class="fa-solid fa-envelope"></i> <span>info@grsolution.co.in</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 GR Solution. All Rights Reserved.</p>
-                <div style="display: flex; gap: 2rem;">
-                    <a href="privacy.html" style="color: inherit;">Privacy Policy</a>
-                    <a href="terms.html" style="color: inherit;">Terms & Conditions</a>
-                </div>
             </div>
         </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
-
 </html>
