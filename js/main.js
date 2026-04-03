@@ -120,25 +120,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.innerText = 'Submitting...';
                 btn.disabled = true;
 
-                // FormSubmit.co Direct Method (As requested)
+                // FormSubmit.co Direct Method
                 form.action = 'https://formsubmit.co/kamleshg9569@gmail.com';
                 form.method = 'POST';
 
-                // Add hidden fields dynamically to ensure FormSubmit settings are active
-                const fields = [
-                    { name: '_next', value: window.location.href },
-                    { name: '_subject', value: 'New Service Request! (GR Solution)' },
-                    { name: '_captcha', value: 'false' },
-                    { name: '_template', value: 'table' }
-                ];
+                // Helper to add hidden fields safely without duplication
+                const appendHidden = (name, value) => {
+                    if (!form.querySelector(`input[name="${name}"]`)) {
+                        const input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = name;
+                        input.value = value;
+                        form.appendChild(input);
+                    }
+                };
 
-                fields.forEach(fieldData => {
-                    const input = document.createElement('input');
-                    input.type = 'hidden';
-                    input.name = fieldData.name;
-                    input.value = fieldData.value;
-                    form.appendChild(input);
-                });
+                appendHidden('_next', window.location.href);
+                appendHidden('_subject', 'New Service Request! (GR Solution)');
+                appendHidden('_captcha', 'false');
+                appendHidden('_template', 'table');
+                appendHidden('Page_Source', window.location.href);
 
                 form.submit();
             }
