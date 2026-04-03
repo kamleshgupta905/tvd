@@ -22,18 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
-            const isFlex = navLinks.style.display === 'flex';
-            navLinks.style.display = isFlex ? 'none' : 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = '#fff';
-            navLinks.style.padding = '1.5rem 0';
-            navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
-            navLinks.style.maxHeight = 'calc(100vh - 70px)';
-            navLinks.style.overflowY = 'auto';
+            const isFlex = navLinks.classList.contains('mobile-active');
+            if (isFlex) {
+                navLinks.classList.remove('mobile-active');
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.classList.add('mobile-active');
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = '#fff';
+                navLinks.style.padding = '1.5rem 0';
+                navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
+                navLinks.style.maxHeight = 'calc(100vh - 70px)';
+                navLinks.style.overflowY = 'auto';
+            }
         });
     }
 
@@ -57,9 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
@@ -82,14 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
-        question.addEventListener('click', () => {
-            const isOpen = answer.style.maxHeight;
-            // Close others
-            faqItems.forEach(it => it.querySelector('.faq-answer').style.maxHeight = null);
-            if (!isOpen) {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-            }
-        });
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                const isOpen = answer.style.maxHeight;
+                // Close others
+                faqItems.forEach(it => it.querySelector('.faq-answer').style.maxHeight = null);
+                if (!isOpen) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        }
     });
 
     // 6. Intersection Observer for Scroll Animations
@@ -101,86 +114,81 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s ease-out';
-        observer.observe(el);
-    });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-    // 7. Form Validation
-    const leadForms = document.querySelectorAll('.lead-form');
-    leadForms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
+    // 7. Quick Enquiry Modal Logic
+    const enquiryModal = document.getElementById('enquiryModal');
+    const openModalBtns = document.querySelectorAll('.open-enquiry-modal');
+    const closeModalBtn = document.querySelector('.close-modal');
 
-            // Simple validation
-            const inputs = form.querySelectorAll('input, select, textarea');
-            let isValid = true;
-            inputs.forEach(input => {
-                if (input.required && !input.value) {
-                    isValid = false;
-                    input.style.borderColor = 'red';
-                } else {
-                    input.style.borderColor = '#e5e7eb';
-                }
+    if (enquiryModal) {
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                enquiryModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
-
-            if (isValid) {
-                btn.innerText = 'Submitting...';
-                btn.disabled = true;
-
-                // FormSubmit.co Direct Method
-                form.action = 'https://formsubmit.co/kamleshg9569@gmail.com';
-                form.method = 'POST';
-
-                // Helper to add hidden fields safely without duplication
-                const appendHidden = (name, value) => {
-                    if (!form.querySelector(`input[name="${name}"]`)) {
-                        const input = document.createElement('input');
-                        input.type = 'hidden';
-                        input.name = name;
-                        input.value = value;
-                        form.appendChild(input);
-                    }
-                };
-
-                appendHidden('_next', window.location.href);
-                appendHidden('_subject', 'New Service Request! (GR Solution)');
-                appendHidden('_captcha', 'false');
-                appendHidden('_template', 'table');
-                appendHidden('Page_Source', window.location.href);
-
-                form.submit();
-            }
         });
-    });
 
-    // 8. Exit Intent Popup
-    let exitPopupShown = false;
-    document.addEventListener('mouseleave', (e) => {
-        if (e.clientY < 0 && !exitPopupShown) {
-            const popup = document.getElementById('exitIntentPopup');
-            if (popup) {
-                popup.style.display = 'flex';
-                exitPopupShown = true;
+        const closeModal = () => {
+            enquiryModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', (e) => {
+            if (e.target === enquiryModal) closeModal();
+        });
+    }
+
+    // 8. Form Submission Handling (Formspree Integration)
+    const enquiryForm = document.getElementById('enquiryForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (enquiryForm) {
+        enquiryForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = enquiryForm.querySelector('.btn-submit');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(enquiryForm);
+            
+            try {
+                const response = await fetch(enquiryForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    enquiryForm.reset();
+                    formStatus.innerHTML = '<div style="color: #22c55e; margin-top: 1rem; text-align: center; font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Thank you! Message sent successfully.</div>';
+                    setTimeout(() => {
+                        enquiryModal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                        formStatus.innerHTML = '';
+                    }, 3000);
+                } else {
+                    formStatus.innerHTML = '<div style="color: #ef4444; margin-top: 1rem; text-align: center;">Oops! Something went wrong.</div>';
+                }
+            } catch (error) {
+                formStatus.innerHTML = '<div style="color: #ef4444; margin-top: 1rem; text-align: center;">Connection error. Please try again.</div>';
+            } finally {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
             }
-        }
-    });
-
-    const closePopup = document.getElementById('closePopup');
-    if (closePopup) {
-        closePopup.addEventListener('click', () => {
-            document.getElementById('exitIntentPopup').style.display = 'none';
         });
     }
 });
