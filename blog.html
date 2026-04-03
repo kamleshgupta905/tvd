@@ -55,7 +55,7 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <div class="nav-ctas" style="display: flex; gap: 1rem; align-items: center;">
-                <a href="contact.html" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);"><i class="fa-solid fa-paper-plane"></i> Quick Enquiry</a>
+                <a href="#" class="btn btn-outline open-enquiry-modal" style="border-color: var(--primary); color: var(--primary);"><i class="fa-solid fa-paper-plane"></i> Quick Enquiry</a>
                 <a href="tel:+919008528434" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
                 <div class="mobile-menu-toggle"><i class="fa-solid fa-bars"></i></div>
             </div>
@@ -268,6 +268,45 @@
             </div>
         </div>
     </footer>
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Quick Enquiry</h2>
+                <p>Fill in the details below and we'll contact you within 5 minutes!</p>
+            </div>
+            <form id="enquiryForm" action="https://formsubmit.co/ajax/kamleshji9569@gmail.com" method="POST" class="enquiry-form">
+                <input type="hidden" name="_subject" value="New Quick Enquiry from Website!">
+                <div class="form-group">
+                    <label for="modal-name">Full Name</label>
+                    <input type="text" id="modal-name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Phone Number</label>
+                    <input type="tel" id="modal-phone" name="phone" placeholder="Enter phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-service">Service Required</label>
+                    <select name="service" id="modal-service" style="width: 100%; padding: 0.8rem 1rem; border: 1px solid #e2e8f0; border-radius: 10px;">
+                        <option value="LED TV Repair">LED TV Repair</option>
+                        <option value="OLED/QLED Repair">OLED/QLED Repair</option>
+                        <option value="Panel Bonding">Panel Bonding</option>
+                        <option value="Smart TV Setup">Smart TV Setup</option>
+                        <option value="Mobile/Laptop Repair">Mobile/Laptop Repair</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modal-message">Message (Optional)</label>
+                    <textarea id="modal-message" name="message" rows="3" placeholder="Tell us about the issue"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit Enquiry <i class="fa-solid fa-paper-plane"></i></button>
+                <div id="formStatus"></div>
+            </form>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 
