@@ -1,4 +1,4 @@
-/* 
+﻿/* 
     SLV Service Center - Premium TV Repair Service
     Design System & Main Styles
 */
@@ -1572,37 +1572,19 @@ width: 280px;
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
- / *   - - -   B o o k i n g   S e c t i o n   R e s p o n s i v e n e s s   - - -   * / 
- . b o o k i n g - f e a t u r e - r o w   {   d i s p l a y :   f l e x ;   g a p :   1 . 5 r e m ;   a l i g n - i t e m s :   f l e x - s t a r t ;   t r a n s i t i o n :   a l l   0 . 3 s   e a s e ;   } 
- . b o o k i n g - c o n t a c t - r o w   {   m a r g i n - t o p :   4 r e m ;   d i s p l a y :   f l e x ;   g a p :   5 r e m ;   p a d d i n g - t o p :   3 r e m ;   b o r d e r - t o p :   1 p x   s o l i d   # f 1 f 5 f 9 ;   t r a n s i t i o n :   a l l   0 . 3 s   e a s e ;   } 
- 
- @ m e d i a   ( m a x - w i d t h :   9 9 2 p x )   { 
-         . s e c t i o n - c o n t a c t - b o o k i n g   . h e r o - g r i d   {   g a p :   3 r e m   ! i m p o r t a n t ;   } 
-         . b o o k i n g - f e a t u r e - r o w   {   j u s t i f y - c o n t e n t :   c e n t e r ;   t e x t - a l i g n :   l e f t ;   } 
-         . b o o k i n g - c o n t a c t - r o w   {   j u s t i f y - c o n t e n t :   c e n t e r ;   g a p :   3 r e m ;   } 
- } 
- 
- @ m e d i a   ( m a x - w i d t h :   7 6 8 p x )   { 
-         . b o o k i n g - f e a t u r e - r o w   {   f l e x - d i r e c t i o n :   c o l u m n ;   a l i g n - i t e m s :   c e n t e r ;   t e x t - a l i g n :   c e n t e r ;   } 
-         . b o o k i n g - c o n t a c t - r o w   {   f l e x - d i r e c t i o n :   c o l u m n ;   g a p :   2 r e m ;   a l i g n - i t e m s :   c e n t e r ;   t e x t - a l i g n :   c e n t e r ;   b o r d e r - t o p :   n o n e ;   p a d d i n g - t o p :   0 ;   } 
-         . s e c t i o n - c o n t a c t - b o o k i n g   {   p a d d i n g :   6 0 p x   0   ! i m p o r t a n t ;   } 
-         . s e c t i o n - c o n t a c t - b o o k i n g   . h e r o - g r i d   >   d i v : f i r s t - c h i l d   {   m a r g i n - b o t t o m :   2 r e m ;   } 
- } 
-  
- 1 7 4  
- a r o u n d  
- 1 3  
- a r o u n d  
- 1 3  
- a r o u n d  
- 1 3  
- a r o u n d  
- 1 3 a r o u n d  
- 1 3  
- a r o u n d  
- 1 3  
- a r o u n d  
- 1 3  
- a r o u n d  
- 1 3  
- 
+/* --- Booking Section Responsiveness --- */
+.booking-feature-row { display: flex; gap: 1.5rem; align-items: flex-start; transition: all 0.3s ease; }
+.booking-contact-row { margin-top: 4rem; display: flex; gap: 5rem; padding-top: 3rem; border-top: 1px solid #f1f5f9; transition: all 0.3s ease; }
+
+@media (max-width: 992px) {
+    .section-contact-booking .hero-grid { gap: 3rem !important; }
+    .booking-feature-row { justify-content: center; text-align: left; }
+    .booking-contact-row { justify-content: center; gap: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .booking-feature-row { flex-direction: column; align-items: center; text-align: center; }
+    .booking-contact-row { flex-direction: column; gap: 2rem; align-items: center; text-align: center; border-top: none; padding-top: 0; }
+    .section-contact-booking { padding: 60px 0 !important; }
+    .section-contact-booking .hero-grid > div:first-child { margin-bottom: 2rem; }
+}
