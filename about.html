@@ -36,6 +36,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -76,7 +77,7 @@
 
     <section class="section" style="padding: 100px 0;">
         <div class="container hero-grid" style="align-items: center;">
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <span class="badge" style="font-size: 1rem; padding: 0.6rem 1.4rem;">OUR STORY</span>
                 <h1 style="margin-top: 1rem; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1;">Excellence In <br><span style="color: var(--primary);">TV Repair Service</span></h1>
                 <p>GR Solution was founded on three principles: Honesty, Expertise, and Speed. Since our inception in
@@ -95,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <img src="images/team.png" alt="GR Solution Team"
                     style="border-radius: 20px; width: 100%; box-shadow: var(--shadow-lg);">
             </div>
@@ -105,12 +106,12 @@
     <!-- Core Values -->
     <section class="section" style="padding: 100px 0; background: var(--bg-light);">
         <div class="container">
-            <div class="section-title animate-on-scroll" style="text-align: center;">
+            <div class="section-title data-aos="fade-up"" style="text-align: center;">
                 <h2>Our Core Values</h2>
                 <p>The six pillars that define our service excellence and technical integrity.</p>
             </div>
             <div class="grid-3" style="margin-top: 4rem;">
-                <div class="card animate-on-scroll"
+                <div class="card data-aos="fade-up""
                     style="text-align: center; background: var(--white); padding: 3rem;">
                     <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.2rem;"><i
                             class="fa-solid fa-microchip"></i></div>
@@ -118,7 +119,7 @@
                     <p>We invest 100+ hours monthly in R&D to stay ahead of the latest display technologies and repair
                         methods.</p>
                 </div>
-                <div class="card animate-on-scroll"
+                <div class="card data-aos="fade-up""
                     style="text-align: center; background: var(--white); padding: 3rem;">
                     <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.2rem;"><i
                             class="fa-solid fa-handshake"></i></div>
@@ -126,7 +127,7 @@
                     <p>We provide upfront pricing with no hidden diagnostic fees, ensuring absolute trust and long-term
                         partnership.</p>
                 </div>
-                <div class="card animate-on-scroll"
+                <div class="card data-aos="fade-up""
                     style="text-align: center; background: var(--white); padding: 3rem;">
                     <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.2rem;"><i
                             class="fa-solid fa-leaf"></i></div>
@@ -134,7 +135,7 @@
                     <p>By fixing complex board-level issues, we prevent tons of eWaste, helping you save money and the
                         environment.</p>
                 </div>
-                <div class="card animate-on-scroll"
+                <div class="card data-aos="fade-up""
                     style="text-align: center; background: var(--white); padding: 3rem;">
                     <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.2rem;"><i
                             class="fa-solid fa-award"></i></div>
@@ -142,7 +143,7 @@
                     <p>Every technician is brand-certified and undergoes rigorous quarterly audits for quality
                         assurance.</p>
                 </div>
-                <div class="card animate-on-scroll"
+                <div class="card data-aos="fade-up""
                     style="text-align: center; background: var(--white); padding: 3rem;">
                     <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.2rem;"><i
                             class="fa-solid fa-headset"></i></div>
@@ -150,7 +151,7 @@
                     <p>Our mobile technical desk is always available across Delhi, Noida & NCR for emergency repairs and signal
                         troubleshooting.</p>
                 </div>
-                <div class="card animate-on-scroll"
+                <div class="card data-aos="fade-up""
                     style="text-align: center; background: var(--white); padding: 3rem;">
                     <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.2rem;"><i
                             class="fa-solid fa-clock-rotate-left"></i></div>
@@ -292,6 +293,15 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>

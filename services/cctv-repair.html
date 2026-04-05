@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="bg-light">
 
@@ -46,7 +47,7 @@
                 <a href="../index.html" style="color: inherit;">Home</a> / <a href="../services.html" style="color: inherit;">Services</a> / CCTV Security
             </div>
             <div class="hero-grid" style="align-items: center;">
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <span class="badge">SECURE YOUR SPACE</span>
                     <h1 style="font-size: 3.5rem; line-height: 1.1; margin-top: 1rem;">Smart Security <br><span style="color: var(--primary);">CCTV Solutions</span></h1>
                     <p style="margin: 2rem 0; font-size: 1.1rem; line-height: 1.6;">Protect your home and office with Delhi, Noida & NCR's most trusted surveillance experts. We offer high-definition IP camera installation, DVR/NVR troubleshooting, and 24/7 remote monitoring setup.</p>
@@ -55,7 +56,7 @@
                         <a href="https://wa.me/919990283890" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp Quote</a>
                     </div>
                 </div>
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <img src="../images/service_cctv.png" alt="CCTV Installation Service" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                 </div>
             </div>
@@ -69,17 +70,17 @@
                 <h2>Our Security <span style="color: var(--primary);">Expertise</span></h2>
             </div>
             <div class="grid-3" style="margin-top: 4rem;">
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-camera" style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>HD Installation</h4>
                     <p>Professional placement and wiring of 4K night-vision cameras for 100% coverage area.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-server" style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>DVR/NVR Repair</h4>
                     <p>Technical servicing for recording devices, hard drive upgrades, and backup recovery solutions.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-cloud" style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Remote Access</h4>
                     <p>Configuring mobile apps for real-time surveillance of your premises from anywhere in the world.</p>
@@ -150,5 +151,14 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>

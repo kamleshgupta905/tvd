@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="bg-light">
 
@@ -45,7 +46,7 @@
                 <a href="../index.html" style="color: inherit;">Home</a> / <a href="../services.html" style="color: inherit;">Services</a> / DTH Services
             </div>
             <div class="hero-grid" style="align-items: center;">
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <span class="badge">SAME-DAY INSTALLATION</span>
                     <h1 style="font-size: 3.5rem; line-height: 1.1; margin-top: 1rem;">Premium DTH <br><span style="color: var(--primary);">Service Experts</span></h1>
                     <p style="margin: 2rem 0; font-size: 1.1rem; line-height: 1.6;">Never miss your favorite show again. We provide authorized installation and signal alignment for all major DTH providers. From new connections to shifting services, we handle it all with precision.</p>
@@ -54,7 +55,7 @@
                         <a href="https://wa.me/919990283890" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Chat Support</a>
                     </div>
                 </div>
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <img src="../images/service_dth.png" alt="DTH Signal Service" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                 </div>
             </div>
@@ -68,17 +69,17 @@
                 <h2>Comprehensive DTH <span style="color: var(--primary);">Solutions</span></h2>
             </div>
             <div class="grid-3" style="margin-top: 4rem;">
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-satellite-dish" style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Signal Alignment</h4>
                     <p>Fixing 'No Signal' issues with precision meter alignment and cable quality checks.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-house-chimney" style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>New Connection</h4>
                     <p>Same-day setup for Tata Play, Airtel Digital TV, and Sun Direct at competitive prices.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-wrench" style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Hardware Repair</h4>
                     <p>Replacing damaged LNBs, cables, and repairing set-top box power issues effectively.</p>
@@ -140,5 +141,14 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>

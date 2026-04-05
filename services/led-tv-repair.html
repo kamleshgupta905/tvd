@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="bg-light">
@@ -60,7 +61,7 @@
                     style="color: inherit;">Services</a> / LED TV Repair
             </div>
             <div class="hero-grid" style="align-items: center;">
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <span class="badge">TECHNICAL EXCELLENCE</span>
                     <h1 style="font-size: 3.5rem; line-height: 1.1; margin-top: 1rem;">Premium LED TV <br><span
                             style="color: var(--primary);">Repair & Service</span></h1>
@@ -73,7 +74,7 @@
                                 class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
                     </div>
                 </div>
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <img src="../images/service_tv.png" alt="LED TV Repair"
                         style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                 </div>
@@ -88,21 +89,21 @@
                 <h2>Common LED TV Issues <span style="color: var(--primary);">We Fix</span></h2>
             </div>
             <div class="grid-3" style="margin-top: 4rem;">
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-lightbulb"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Backlight Repair</h4>
                     <p>Screen appearing dark while sound is working? We replace faulty LED strips with original
                         high-intensity kits.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-plug"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Power Issues</h4>
                     <p>TV not turning on or showing a red light? We fix power supply units and burnt motherboards on the
                         same day.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-image"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Horizontal Lines</h4>
@@ -116,11 +117,11 @@
     <!-- Trust Building -->
     <section class="section" style="padding: 100px 0; background: var(--bg-light);">
         <div class="container hero-grid">
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <img src="../images/team.png" alt="Our Team"
                     style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-md);">
             </div>
-            <div class="animate-on-scroll" style="display: flex; flex-direction: column; justify-content: center;">
+            <div data-aos="fade-up" style="display: flex; flex-direction: column; justify-content: center;">
                 <h2 style="margin-bottom: 2rem;">Why Trust Our <span style="color: var(--primary);">Expert
                         Engineers?</span></h2>
                 <ul class="footer-links" style="color: var(--text-main);">
@@ -282,6 +283,15 @@
     </div>
 
     <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>

@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="bg-light">
@@ -60,7 +61,7 @@
                     style="color: inherit;">Services</a> / OLED & QLED Repair
             </div>
             <div class="hero-grid" style="align-items: center;">
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <span class="badge">PREMIUM TECHNOLOGY</span>
                     <h1 style="font-size: 3.5rem; line-height: 1.1; margin-top: 1rem;">OLED & QLED <br><span
                             style="color: var(--primary);">Specialist Repair</span></h1>
@@ -73,7 +74,7 @@
                                 class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
                     </div>
                 </div>
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <img src="../images/service_oled.png" alt="OLED TV Repair"
                         style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                 </div>
@@ -88,21 +89,21 @@
                 <h2>Our OLED/QLED <span style="color: var(--primary);">Capabilities</span></h2>
             </div>
             <div class="grid-3" style="margin-top: 4rem;">
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-microchip"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Main Board Repair</h4>
                     <p>Advanced troubleshooting of smart features, HDMI ports, and wireless connectivity for premium
                         models.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-wand-magic-sparkles"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Image Calibration</h4>
                     <p>Fixing burn-in issues, ghosting, and color inaccuracies on OLED panels using specialized tools.
                     </p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-bolt"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Power Supply Unit</h4>
@@ -234,6 +235,15 @@
     </div>
 
     <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>

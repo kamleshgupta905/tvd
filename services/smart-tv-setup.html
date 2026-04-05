@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="bg-light">
@@ -48,7 +49,7 @@
                     style="color: inherit;">Services</a> / Smart TV Setup
             </div>
             <div class="hero-grid" style="align-items: center;">
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <span class="badge">SMART SOLUTIONS</span>
                     <h1 style="font-size: 3.5rem; line-height: 1.1; margin-top: 1rem;">Seamless Smart <br><span
                             style="color: var(--primary);">TV Configuration</span></h1>
@@ -61,7 +62,7 @@
                                 class="fa-brands fa-whatsapp"></i> Chat Now</a>
                     </div>
                 </div>
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <img src="../images/service_tv.png" alt="Smart TV Setup"
                         style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                 </div>
@@ -76,19 +77,19 @@
                 <h2>What's Included In <span style="color: var(--primary);">Our Setup?</span></h2>
             </div>
             <div class="grid-3" style="margin-top: 4rem;">
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-layer-group"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>App Ecosystem</h4>
                     <p>Installing and configuring Netflix, Prime Video, YouTube, and other regional streaming apps.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-wifi"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Network Sync</h4>
                     <p>Ensuring stable dual-band Wi-Fi connectivity and LAN setup for 4K buffer-free streaming.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <i class="fa-solid fa-hammer"
                         style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                     <h4>Wall Mounting</h4>
@@ -151,6 +152,15 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>

@@ -16,6 +16,7 @@
         .feature-item { display: flex; gap: 0.5rem; align-items: center; font-weight: 600; }
     </style>
 <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="no-nav-links">
 
@@ -40,7 +41,7 @@
     <!-- Hero Conversion -->
     <section class="section" style="padding: 80px 0; background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);">
         <div class="container hero-grid" style="align-items: center;">
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <span class="badge" style="background: rgba(0,74,173,0.1); color: var(--primary);">#1 TV REPAIR IN Delhi, Noida & NCR</span>
                 <h1 style="font-size: 3rem; margin-top: 1.5rem;">Broken TV? We Fix It <br><span style="color: var(--primary);">Today At Home!</span></h1>
                 <p style="font-size: 1.2rem; margin-bottom: 2rem;">Don't wait weeks for a repair. Our expert engineers provide doorstep service within 2 hours across Delhi, Noida & NCR.</p>
@@ -56,7 +57,7 @@
                 </div>
             </div>
             
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <div class="card" style="border: 2px solid var(--primary);">
                     <h3 style="text-align: center; margin-bottom: 1.5rem;">Schedule Your Repair</h3>
                     <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Enter your details for a free diagnostic call.</p>
@@ -128,7 +129,7 @@
 
     <!-- Urgency Footer -->
     <section class="section" style="padding: 60px 0; background: var(--secondary); color: var(--white); text-align: center;">
-        <div class="container animate-on-scroll">
+        <div class="container data-aos="fade-up"">
             <h2 style="color: white; margin-bottom: 1.5rem;">Is Your TV Still Not Working?</h2>
             <p style="margin-bottom: 2.5rem; opacity: 0.8;">Call now for a same-day diagnosis and get back to your favorite shows.</p>
             <a href="tel:+919990283890" class="btn btn-accent btn-lg" style="padding: 1.2rem 3.5rem; font-size: 1.2rem; font-weight: 800;">CALL NOW: +91 99902 83890</a>
@@ -145,5 +146,14 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>

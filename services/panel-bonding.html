@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="../images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="bg-light">
@@ -60,7 +61,7 @@
                     style="color: inherit;">Services</a> / Panel Bonding
             </div>
             <div class="hero-grid" style="align-items: center;">
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <span class="badge">ADVANCED REPAIR</span>
                     <h1 style="font-size: 3.5rem; line-height: 1.1; margin-top: 1rem;">Advanced Panel <br><span
                             style="color: var(--primary);">Bonding Center</span></h1>
@@ -73,7 +74,7 @@
                                 class="fa-brands fa-whatsapp"></i> WhatsApp Status</a>
                     </div>
                 </div>
-                <div class="animate-on-scroll">
+                <div data-aos="fade-up">
                     <img src="../images/service_panel.png" alt="Panel Bonding Repair"
                         style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                 </div>
@@ -88,20 +89,20 @@
                 <h2>Our High-Precision <span style="color: var(--primary);">Process</span></h2>
             </div>
             <div class="grid-3" style="margin-top: 4rem;">
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem;">01.
                     </div>
                     <h4>Diagnostic Check</h4>
                     <p>Microscopic inspection of the panel gate and source COFs to identify the exact point of failure.
                     </p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem;">02.
                     </div>
                     <h4>COF Replacement</h4>
                     <p>Removing the damaged Chip-on-Film and cleaning the panel glass for a new bonding cycle.</p>
                 </div>
-                <div class="card animate-on-scroll">
+                <div class="card data-aos="fade-up"">
                     <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem;">03.
                     </div>
                     <h4>Machine Bonding</h4>
@@ -233,6 +234,15 @@
     </div>
 
     <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>

@@ -32,6 +32,7 @@
     <!-- Google Search Console Verification - Replace YOUR_VERIFICATION_ID with your ID -->
     <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_ID" /> -->
 <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -72,7 +73,7 @@
     <!-- Contact Hero -->
     <section class="section-hero-alt">
         <div class="container hero-grid hero-grid-centered">
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <span class="badge">REACH OUT</span>
                 <h1 class="fs-hero-title">Experience Premium <br><span class="primary-text">At-Home TV Repair</span></h1>
                 <p class="fs-intro-p">Delhi, Noida & NCR's most trusted engineering team for OLED, QLED, and LED TV repairs. Contact us now for a free diagnostic consultation and experience professional, same-day home service at your doorstep.</p>
@@ -87,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <img src="images/service_tv.png" alt="Book TV Repair" class="card-img-rounded">
             </div>
         </div>
@@ -95,7 +96,7 @@
 
     <section class="section" style="padding: 100px 0;">
         <div class="container hero-grid hero-grid-centered">
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <h2>Have A Question? <br><span class="primary-text">Talk To Us</span></h2>
                 <p>Have questions about a repair or want to book an appointment? Get in touch with our team today and we'll get back to you within 5 minutes.</p>
 
@@ -126,7 +127,7 @@
                 </div>
             </div>
 
-            <div class="animate-on-scroll">
+            <div data-aos="fade-up">
                 <form class="card lead-form form-appointment">
                     <h3 class="mb-4">Book Your Appointment</h3>
                     <div class="form-group-alt">
@@ -162,7 +163,7 @@
 
     <!-- Map Section -->
     <section class="section-full-width-map">
-        <div class="container animate-on-scroll">
+        <div class="container data-aos="fade-up"">
             <h2 class="mb-4">Locate Our Center</h2>
             <div class="map-container">
                 <iframe
@@ -301,6 +302,15 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>
