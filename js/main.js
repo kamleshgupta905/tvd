@@ -4,6 +4,11 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Force scroll to top on refresh to ensure hero animation plays
+    window.scrollTo(0, 0);
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
     // 1. Sticky Header
     const header = document.querySelector('header');
     const stickyHeader = () => {
