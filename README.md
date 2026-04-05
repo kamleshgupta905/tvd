@@ -1,6 +1,6 @@
-# GR Solution - Premium TV Repair HTML5 Template
+# SLV Service Center - Premium TV Repair HTML5 Template
 
-**GR Solution** is a high-performance, SEO-optimized, and visually stunning HTML5 template designed specifically for TV Repair, Electronics Servicing, and Technical Support businesses. This template features a modern, clean, and professional design that ensures a premium user experience across all devices.
+**SLV Service Center** is a high-performance, SEO-optimized, and visually stunning HTML5 template designed specifically for TV Repair, Electronics Servicing, and Technical Support businesses. This template features a modern, clean, and professional design that ensures a premium user experience across all devices.
 
 ## 🚀 Key Features
 
@@ -44,9 +44,9 @@
 *   **HTML5 & CSS3** (Vanilla)
 *   **Modern JavaScript** (ES6+)
 *   **Font Awesome 6.4.0**
-# GR Solution - Premium TV Repair HTML5 Template
+# SLV Service Center - Premium TV Repair HTML5 Template
 
-**GR Solution** is a high-performance, SEO-optimized, and visually stunning HTML5 template designed specifically for TV Repair, Electronics Servicing, and Technical Support businesses. This template features a modern, clean, and professional design that ensures a premium user experience across all devices.
+**SLV Service Center** is a high-performance, SEO-optimized, and visually stunning HTML5 template designed specifically for TV Repair, Electronics Servicing, and Technical Support businesses. This template features a modern, clean, and professional design that ensures a premium user experience across all devices.
 
 ## 🚀 Key Features
 
@@ -92,15 +92,10 @@
 *   **Font Awesome 6.4.0**
 *   **Google Fonts (Inter)**
 
-## 📜 Full Documentation
-
-For detailed instructions on changing brand colors, updating the FAQ logic, or configuring the Enquiry Form, please refer to `/Documentation/documentation.html`.
-
 ## ⚖️ License
 
-This product is exclusively available on **Envato Market**. All rights are reserved by **GR Solution**. 
-Usage is subject to the [Envato Market Standard License](LICENSE).
+&copy; 2026 SLV Service Center. All Rights Reserved. This project is private property and unauthorized distribution is prohibited.
 
 ---
 
-&copy; 2026 GR Solution. Engineered for Excellence & Professional Service.
+&copy; 2026 SLV Service Center. Engineered for Excellence & Professional Service.
