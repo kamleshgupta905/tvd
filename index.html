@@ -632,7 +632,7 @@
                     <div style="background: white; padding: 3rem; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid #f1f5f9;">
                         <h3 style="margin-bottom: 2.5rem; font-size: 1.5rem; color: var(--secondary);">Request A Callback</h3>
                         
-                        <form action="https://formsubmit.co/ajax/kamleshg9569@gmail.com" method="POST">
+                        <form id="callbackForm" action="https://formsubmit.co/ajax/kamleshg9569@gmail.com" method="POST">
                             <input type="hidden" name="_subject" value="New Callback Request!">
                             <input type="hidden" name="_captcha" value="false">
 
@@ -675,6 +675,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.2rem; border-radius: 12px; font-weight: 700; font-size: 1rem; letter-spacing: 0.01em;">PROCEED TO BOOKING</button>
+                            <div id="callbackStatus"></div>
                         </form>
                     </div>
                 </div>
@@ -831,12 +832,13 @@
                 style="position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer;">&times;</div>
             <h2 style="color: var(--primary);">Wait! Don't Leave Yet</h2>
             <p>Get an extra 10% OFF on your first TV repair booking today.</p>
-            <form class="lead-form" style="box-shadow: none; padding: 0; border: none; margin-top: 1.5rem;">
+            <form id="exitIntentForm" action="https://formsubmit.co/ajax/kamleshg9569@gmail.com" method="POST" class="lead-form" style="box-shadow: none; padding: 0; border: none; margin-top: 1.5rem;">
                 <input type="tel" name="phone" placeholder="Enter Phone Number" required
                     style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
                 <input type="hidden" name="_subject" value="Exit Intent Discount Claim">
                 <input type="hidden" name="_captcha" value="false">
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Claim My Discount</button>
+                <div id="exitIntentStatus"></div>
             </form>
         </div>
     </div>

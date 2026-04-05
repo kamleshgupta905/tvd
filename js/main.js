@@ -153,23 +153,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 8. Form Submission Handling (Formspree Integration)
-    const enquiryForm = document.getElementById('enquiryForm');
-    const formStatus = document.getElementById('formStatus');
+    // 8. Robust Form Submission Handling (Generic AJAX)
+    const handleFormSubmit = async (form, statusEl, isModal = false) => {
+        if (!form) return;
 
-    if (enquiryForm) {
-        enquiryForm.addEventListener('submit', async (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const submitBtn = enquiryForm.querySelector('.btn-submit');
+            const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
             
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
-            const formData = new FormData(enquiryForm);
+            const formData = new FormData(form);
             
             try {
-                const response = await fetch(enquiryForm.action, {
+                const response = await fetch(form.action || 'https://formsubmit.co/ajax/kamleshg9569@gmail.com', {
                     method: 'POST',
                     body: formData,
                     headers: {
@@ -178,22 +177,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    enquiryForm.reset();
-                    formStatus.innerHTML = '<div style="color: #22c55e; margin-top: 1rem; text-align: center; font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Thank you! Message sent successfully.</div>';
+                    form.reset();
+                    statusEl.innerHTML = '<div style="color: #22c55e; margin-top: 1rem; text-align: center; font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Thank you! Message sent successfully.</div>';
+                    
                     setTimeout(() => {
-                        enquiryModal.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                        formStatus.innerHTML = '';
+                        if (isModal) {
+                            const modal = document.getElementById('enquiryModal');
+                            if (modal) modal.classList.remove('active');
+                            document.body.style.overflow = 'auto';
+                        }
+                        statusEl.innerHTML = '';
                     }, 3000);
                 } else {
-                    formStatus.innerHTML = '<div style="color: #ef4444; margin-top: 1rem; text-align: center;">Oops! Something went wrong.</div>';
+                    statusEl.innerHTML = '<div style="color: #ef4444; margin-top: 1rem; text-align: center;">Oops! Something went wrong.</div>';
                 }
             } catch (error) {
-                formStatus.innerHTML = '<div style="color: #ef4444; margin-top: 1rem; text-align: center;">Connection error. Please try again.</div>';
+                statusEl.innerHTML = '<div style="color: #ef4444; margin-top: 1rem; text-align: center;">Connection error. Please try again.</div>';
             } finally {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
             }
         });
-    }
+    };
+
+    // Initialize forms
+    handleFormSubmit(
+        document.getElementById('enquiryForm'), 
+        document.getElementById('formStatus'),
+        true
+    );
+    
+    handleFormSubmit(
+        document.getElementById('appointmentForm'), 
+        document.getElementById('appointmentStatus'),
+        false
+    );
+
+    handleFormSubmit(
+        document.getElementById('callbackForm'), 
+        document.getElementById('callbackStatus'),
+        false
+    );
+
+    handleFormSubmit(
+        document.getElementById('exitIntentForm'), 
+        document.getElementById('exitIntentStatus'),
+        false
+    );
 });
